@@ -1,0 +1,68 @@
+/* BODY */
+body {
+  margin: 0 auto;
+  max-width: 760px;
+  display: flex;
+  flex-flow: column;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+}
+p {
+  font-weight: 300;
+}
+/* CONTAINER ELEMENT */
+.container {
+  display: flex;
+  flex-flow: column;
+}
+.container input {
+  border: 1px solid rgb(179, 179, 179);
+  padding: 10px;
+  outline: none;
+}
+.container button {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(179, 179, 179);
+  background-color: rgb(179, 179, 179);
+  color: white;
+  transition: 0.3s;
+}
+.container button:hover {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(211, 211, 211);
+  background-color: rgb(211, 211, 211);
+  color: white;
+  transition: 0.3s;
+}
+/* HEADER */
+header {
+  padding-bottom: 20px;
+}
+.link {
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgb(128, 128, 128);
+  margin-top: 20px;
+}
+
+footer h3 {
+  color: rgb(128, 128, 128);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ABOUT PAGE */
+.weather {
+}
