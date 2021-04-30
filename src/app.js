@@ -3,6 +3,9 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 
+// Setting port
+const port = process.env.PORT || 3000;
+
 // GETTING GEOCODE AND WEATHER STACK
 const geocode = require("./utils/geocode");
 const weatherstack = require("./utils/weatherstack");
@@ -106,6 +109,6 @@ app.get("*", (req, res) => {
   });
 });
 // STARTING SERVER
-app.listen(3000, function (params) {
-  console.log("Server now is running on localhost 300!");
+app.listen(port, () => {
+  console.log(`Server now is running on localhost ${port}!`);
 });
