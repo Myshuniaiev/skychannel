@@ -33,9 +33,9 @@ app.get("", (req, res) => {
 });
 
 // ABOUT PAGE
-app.get("/about", (req, res) => {
-  res.render("about", {
-    title: "About our app",
+app.get("/statistic", (req, res) => {
+  res.render("statistic", {
+    title: "Statistic",
     body:
       "This weather app is one of best free weather apps with full features: Local weather, weather map (weather map service) and weather widgets.",
     image:
@@ -44,9 +44,26 @@ app.get("/about", (req, res) => {
 });
 
 // HELP PAGE
-app.get("/help", (req, res) => {
-  res.render("help", {
-    title: "Help page",
+app.get("/map", (req, res) => {
+  res.render("map", {
+    title: "Map",
+    body:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore at voluptates sed, aspernatur assumenda mollitia voluptatibus. Illo, dolorum sunt. Dolorem hic a iste ut doloremque aliquam neque ullam velit.",
+  });
+});
+
+// HELP PAGE
+app.get("/calendar", (req, res) => {
+  res.render("calendar", {
+    title: "Calendar",
+    body:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore at voluptates sed, aspernatur assumenda mollitia voluptatibus. Illo, dolorum sunt. Dolorem hic a iste ut doloremque aliquam neque ullam velit.",
+  });
+});
+// HELP PAGE
+app.get("/settings", (req, res) => {
+  res.render("calendar", {
+    title: "Calendar",
     body:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore at voluptates sed, aspernatur assumenda mollitia voluptatibus. Illo, dolorum sunt. Dolorem hic a iste ut doloremque aliquam neque ullam velit.",
   });
@@ -72,15 +89,18 @@ app.get("/weather", function (req, res) {
       const { text, center } = data;
       const latitude = center[1];
       const longitude = center[0];
-      weatherstack(latitude, longitude, (error, data) => {
+      weatherstack(latitude, longitude, (error, { current, location }) => {
         if (error) {
           res.send({
             error: `Weather Error: ${error}`,
           });
         } else {
-          const { temperature, feelslike, weather_descriptions } = data;
+          const { temperature, feelslike, weather_descriptions, observation_time } = current;
+          const { country } = location;
           res.send({
-            location: text,
+            name: text,
+            country: country,
+            time: observation_time,
             forecast: weather_descriptions[0],
             currently: temperature,
             feelslike: feelslike,
