@@ -1,228 +1,68 @@
-/* BODY */
 body {
+  color: #333333;
+  font-family: arial;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+
   display: flex;
-  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
 }
-a {
+
+.main-content {
+  flex-grow: 1;
+}
+
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
+}
+
+header {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+header a {
+  color: #888888;
+  margin-right: 16px;
   text-decoration: none;
 }
-/* CONTAINER page */
-.navigation {
-  width: 15%;
-}
-.container {
-  width: 70%;
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.page-icon {
-  width: 20%;
-  display: block;
-  margin-left: auto;
-  margin-top: 10%;
-  margin-right: auto;
-}
-.page-title {
-  font-family: "Overpass", sans-serif;
-  font-size: 250%;
-  text-align: center;
-  color: #afafaf;
-}
-/* NAVBAR */
-.navbar {
-  display: flex;
-  flex-flow: column;
-  margin-left: 20px;
-  margin-top: 15%;
-  margin-bottom: 30%;
-}
-.navbar i {
-  color: white;
-  font-size: 15px;
-  margin-right: 10px;
+
+.portrait {
+  width: 250px;
 }
 
-/* link address */
-.link-template {
-  display: flex;
-  margin-left: 6%;
-  margin-top: 10%;
-}
-.active {
-  background-color: white;
-}
-.link-template img {
-  width: 10%;
-  margin-right: 5px;
-}
-.link-template a {
-  font-family: "Comfortaa", cursive;
-  font-weight: 500;
-  font-size: 15px;
-  text-decoration: none;
-  color: white;
-}
-/* container */
-.container-navbar {
-  position: fixed;
-  min-height: 2em;
-  background: #6864f4;
-  display: flex;
-  flex-flow: column;
-  width: 15%;
-  margin: 0;
-  margin-bottom: 0px;
-  height: 100vh;
-}
-/* logo */
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #7f7bf1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.logo img {
-  width: 10%;
-  margin-right: 5%;
-}
-.logo h1 {
-  font-family: "Overpass", sans-serif;
-  font-weight: 700;
-  font-size: 100%;
-  color: white;
+input {
+  border: 1px solid #cccccc;
+  padding: 8px;
 }
 
-/* weather */
-.weather {
-  background-color: white;
-  border-radius: 20px;
-  margin: 10%;
-}
-.weather img {
-  width: 20%;
-  margin-right: 10%;
-  margin-top: 10%;
-}
-.weather-city-data h1 {
-  font-family: "Overpass", sans-serif;
-  font-size: 100%;
-  font-weight: 700;
-}
-.weather-time {
-  font-family: "Overpass", sans-serif;
-  font-size: 70%;
-  font-weight: 700;
-  color: #2b3c5d;
-  margin-bottom: -10%;
-}
-.weather-date {
-  font-family: "Overpass", sans-serif;
-  font-size: 55%;
-  font-weight: 600;
-  margin-bottom: -10%;
-  color: #2b3c5d;
-}
-.weather-degrees {
-  font-family: "Overpass", sans-serif;
-  font-size: 30px;
-  color: #2b3c5d;
-  text-align: center;
-}
-.weather-city {
-  font-family: "Overpass", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #2b3c5d;
-  text-align: center;
-  margin-bottom: -5%;
-}
-.weather-country {
-  font-family: "Overpass", sans-serif;
-  font-size: 10px;
-  color: #2b3c5d;
-  text-align: center;
-}
-
-/* INDEX */
-/* search */
-.weather-search-form button {
+button {
   cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: rgb(241, 241, 241);
-  padding: 1% 2%;
-  padding-top: 12px;
-  border-radius: 20%;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 8px;
 }
-.fi-rr-search {
-  color: #6864f4;
-}
-/* input */
-.weather-search-form {
+
+/* data */
+.data {
   display: flex;
+  margin-top: 1%;   
 }
-.weather-search-form input {
-  font-family: "Overpass", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  padding: 10px;
-  color: #9b9b9b;
-  border: none;
-  width: 70%;
-  outline: none;
+.data i {
+    margin: auto 5%;
+    font-size: 100%;
 }
-.weather-message i {
-  color: rgb(202, 202, 202);
-  font-size: 20px;
-}
-.weather-search-form input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-family: "Overpass", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  color: #9b9b9b;
-}
-/* user account */
-.weather-message {
-  border: 2px solid rgb(238, 238, 238);
-  border-radius: 5%;
-  display: flex;
-  padding: 0% 1%;
-}
-.weather-message h1 {
-  color: #9b9b9b;
-  font-size: 15px;
-  font-family: "Overpass", sans-serif;
-  font-weight: 500;
-}
-.weather-message a {
-  color: #dddddd;
-  width: 30px;
-}
-/* weather data */
 .weather-data {
-  display: flex;
-  margin-top: 5%;
-  justify-content: center;
-  align-items: center;
-}
-.weather-data-search {
-  display: flex;
-  margin-top: 5%;
-}
-.weather-data-search i {
-  padding-top: 3px;
-  margin: auto 0;
-  color: #6864f4;
-  font-size: 20px;
-}
-.weather-data-search h1 {
-  font-size: 25px;
-  color: #bebebe;
-  margin-left: 5%;
-  font-family: "Overpass", sans-serif;
-  font-weight: 700;
+    
 }

@@ -33,39 +33,23 @@ app.get("", (req, res) => {
 });
 
 // ABOUT PAGE
-app.get("/statistic", (req, res) => {
+app.get("/help", (req, res) => {
   res.render("statistic", {
-    title: "Statistic",
+    title: "Help",
     body:
       "This weather app is one of best free weather apps with full features: Local weather, weather map (weather map service) and weather widgets.",
     image:
       "https://live-production.wcms.abc-cdn.net.au/e82e2beff906c88e2cc337d25b4fbdba?impolicy=wcms_crop_resize&cropH=689&cropW=1230&xPos=88&yPos=160&width=862&height=485",
   });
 });
-
-// HELP PAGE
-app.get("/map", (req, res) => {
-  res.render("map", {
-    title: "Map",
+// ABOUT PAGE
+app.get("/about", (req, res) => {
+  res.render("statistic", {
+    title: "Help",
     body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore at voluptates sed, aspernatur assumenda mollitia voluptatibus. Illo, dolorum sunt. Dolorem hic a iste ut doloremque aliquam neque ullam velit.",
-  });
-});
-
-// HELP PAGE
-app.get("/calendar", (req, res) => {
-  res.render("calendar", {
-    title: "Calendar",
-    body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore at voluptates sed, aspernatur assumenda mollitia voluptatibus. Illo, dolorum sunt. Dolorem hic a iste ut doloremque aliquam neque ullam velit.",
-  });
-});
-// HELP PAGE
-app.get("/settings", (req, res) => {
-  res.render("calendar", {
-    title: "Calendar",
-    body:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore at voluptates sed, aspernatur assumenda mollitia voluptatibus. Illo, dolorum sunt. Dolorem hic a iste ut doloremque aliquam neque ullam velit.",
+      "This weather app is one of best free weather apps with full features: Local weather, weather map (weather map service) and weather widgets.",
+    image:
+      "https://live-production.wcms.abc-cdn.net.au/e82e2beff906c88e2cc337d25b4fbdba?impolicy=wcms_crop_resize&cropH=689&cropW=1230&xPos=88&yPos=160&width=862&height=485",
   });
 });
 
